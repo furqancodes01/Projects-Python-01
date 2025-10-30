@@ -1,0 +1,10 @@
+original = {'a' : 1, 'b' : 2, 'c' : 3,'d' : 4, 'e' : 1, 'f' : 2 }
+
+inverted = {}
+
+for key , value in original.items():
+    if value not in inverted:
+        inverted[value] = {key}
+    else:
+        inverted[value].add(key)
+print("Inverted Dict: ", inverted)
